@@ -19,6 +19,8 @@ import NavBar from "../components/Nabar/Navbar.astro";
       :root {
         --white-color: #fefefe;
         --bg-primary-color: #1b1e23;
+        --secundary-color: #2d3037;
+        --title-color: #0660ed;
       }
       * {
         margin: 0px;
@@ -27,6 +29,12 @@ import NavBar from "../components/Nabar/Navbar.astro";
         list-style: none;
         text-decoration: none;
         font-family: "Roboto", sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: var(--secundary-color);
       }
     </style>
   </head>
