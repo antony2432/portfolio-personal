@@ -61,7 +61,7 @@ header {
   color: var(--white-color);
   fill: var(--white-color);
   border-radius: 5px;
-  transition: all .8s;
+  transition: all .5s;
 }
 
 .header .navigation .navigation-list .list-item .ancor {
