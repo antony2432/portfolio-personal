@@ -32,72 +32,93 @@ const urlItems: NavigationProps[] = [
       },
     ],
   },
+  {
+    name: "Contacto",
+    path: "/contacto"
+  }
 ];
 ---
 
-<header class="header">
-  <h1 class="header-title">Developer</h1>
-  <button type="button" class="header-button" id="button-hamburger">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      fill="currentColor"
-      class="header-button-svg"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-      ></path>
-    </svg>
-  </button>
-  <nav class="navigation" id="navigation">
-    <ul class="navigation-list" id="navigation-list">
-      {
-        urlItems.map(({ name, path, children }) =>
-          children ? (
-            <li class="list-item children">
-              <span class="ancor">Services</span>
-              <button type="button" class="child-button" id="sub-button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  class="down"
-                  viewBox="0 0 16 16"
+<header>
+  <div class="header">
+    <h1 class="header-title">Developer</h1>
+    <button type="button" class="header-button" id="button-hamburger">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="header-button-svg"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        ></path>
+      </svg>
+    </button>
+    <nav class="navigation" id="navigation">
+      <ul class="navigation-list" id="navigation-list">
+        {
+          urlItems.map(({ name, path, children }) =>
+            children ? (
+              <li class="list-item children">
+                <span class="ancor">Services</span>
+                <button type="button" class="child-button" id="sub-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    class="down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="child-button view"
+                  id="sub-button2"
                 >
-                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                </svg>
-              </button>
-              <nav class="navigation-children" id="navigation-children">
-                <ul
-                  class="navigation-list-children"
-                  id="navigation-list-children"
-                >
-                  {children.map((chi) => (
-                    <li class="list-item-children">
-                      <a href={chi.path} class="ancor">
-                        {chi.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-              <hr />
-            </li>
-          ) : (
-            <li class="list-item">
-              <a href={path} class="ancor">
-                {name}
-              </a>
-              <hr />
-            </li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    class="down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                  </svg>
+                </button>
+                <nav class="navigation-children" id="navigation-children">
+                  <ul
+                    class="navigation-list-children"
+                    id="navigation-list-children"
+                  >
+                    {children.map((chi) => (
+                      <li class="list-item-children">
+                        <a href={chi.path} class="ancor">
+                          {chi.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <hr />
+              </li>
+            ) : (
+              <li class="list-item">
+                <a href={path} class="ancor">
+                  {name}
+                </a>
+                <hr />
+              </li>
+            )
           )
-        )
-      }
-    </ul>
-  </nav>
+        }
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <script>
