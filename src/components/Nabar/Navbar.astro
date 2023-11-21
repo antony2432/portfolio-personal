@@ -102,8 +102,10 @@ const urlItems: NavigationProps[] = [
 
 <script>
   import { atom } from "nanostores";
+  // state declaracion
   const isOpen = atom(false);
   const subIsOpen = atom(false);
+  // declaration of html elements
   const navigation = document.getElementById("navigation");
   const button_hamburger = document.getElementById("button-hamburger");
   const itemsList = document.getElementById("navigation-list")?.offsetHeight;
@@ -112,6 +114,7 @@ const urlItems: NavigationProps[] = [
   const navigation_list_children = document.getElementById(
     "navigation-list-children"
   );
+  // margin declaration
   const margin_general = "1rem";
 
   button_hamburger?.addEventListener("click", () => {
