@@ -1,4 +1,5 @@
 header {
+  min-height: 78px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,11 +31,13 @@ header {
   width: 38px;
   height: 38px;
   fill: var(--title-color);
+  transition: all .2s ease;
 }
 
 .header .logo-section .header-title {
   font-size: 38px;
   font-weight: 400;
+  transition: all .2s ease;
 }
 
 .header .header-button {
@@ -161,6 +164,15 @@ header {
     align-items: center;
   }
 
+  .header .logo-section:hover .logo-section-svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--title-color);
+  }
+
+  .header .logo-section:hover .header-title {
+    font-size: 40px;
+  }
   .header .navigation .navigation-list {
     width: 100%;
     flex-flow: row nowrap;
