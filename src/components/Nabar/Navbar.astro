@@ -34,13 +34,13 @@ const urlItems: NavigationProps[] = [
   },
   {
     name: "Contacto",
-    path: "/contacto"
-  }
+    path: "/contacto",
+  },
 ];
 ---
 
 <header>
-  <div class="header">
+  <div class="header" id="header">
     <h1 class="header-title">Developer</h1>
     <button type="button" class="header-button" id="button-hamburger">
       <svg
@@ -126,6 +126,7 @@ const urlItems: NavigationProps[] = [
   // state declaracion
   const isOpen = atom(false);
   const subIsOpen = atom(false);
+  const isOpenView = atom(false);
   // declaration of html elements
   const navigation = document.getElementById("navigation");
   const button_hamburger = document.getElementById("button-hamburger");
@@ -135,6 +136,8 @@ const urlItems: NavigationProps[] = [
   const navigation_list_children = document.getElementById(
     "navigation-list-children"
   );
+  const sub_button2 = document.getElementById("sub-button2");
+  const header = document.getElementById("header");
   // margin declaration
   const margin_general = "1rem";
 
@@ -165,6 +168,27 @@ const urlItems: NavigationProps[] = [
       navigation
         ? (navigation.style.height = `calc(${itemsList}px + ${margin_general})`)
         : null;
+    }
+  });
+
+  sub_button2?.addEventListener("click", () => {
+    isOpenView.set(!isOpenView.get());
+    if (isOpenView.get()) {
+      navigation_children ? (navigation_children.style.display = "flex") : null;
+      header ? (header.style.overflow = "visible") : null;
+      navigation_children
+        ? (navigation_children.style.height = `calc(${navigation_list_children?.offsetHeight}px + ${margin_general})`)
+        : null;
+    } else {
+      navigation_children ? (navigation_children.style.height = `0`) : null;
+      setTimeout(() => {
+        header ? (header.style.overflow = "hidden") : null;
+      }, 600);
+      setTimeout(() => {
+        navigation_children
+          ? (navigation_children.style.display = "none")
+          : null;
+      }, 300);
     }
   });
 </script>

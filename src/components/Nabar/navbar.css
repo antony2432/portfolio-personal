@@ -160,6 +160,10 @@ header {
     flex-flow: row;
   }
 
+  .header .navigation .navigation-list .list-item .ancor {
+    font-size: 16px
+  }
+
   .header .navigation .navigation-list .list-item:hover {
     background: var(--white-color);
     color: var(--bg-primary-color);
@@ -172,10 +176,27 @@ header {
 
   .header .navigation .navigation-list .list-item.children {
     flex-flow: nowrap;
+    position: relative;
+  }
+
+  .header .navigation .navigation-list .list-item.children .child-button .down {
+    width: 16px;
+    height: 16px;
   }
 
   .header .navigation .navigation-list .list-item.children .navigation-children {
     display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 10px 0px;
+    border-radius: 5px;
+    background: var(--bg-primary-color);
+    transition: all .5s ease;
+  }
+
+  .header .navigation .navigation-list .list-item.children .navigation-children .navigation-list-children {
+    margin-top: 0
   }
 
   .header .navigation .navigation-list .list-item.children .child-button {
