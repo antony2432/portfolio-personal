@@ -1,13 +1,6 @@
 ---
 import "./navbar.css";
-interface NavigationProps {
-  name: string;
-  path: string;
-  children?: Array<{
-    name: string;
-    path: string;
-  }>;
-}
+import { NavigationProps } from './navigation.props'
 
 const urlItems: NavigationProps[] = [
   {

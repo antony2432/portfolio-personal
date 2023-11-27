@@ -1,0 +1,64 @@
+---
+import NavBar from "../components/Nabar/Navbar.astro";
+interface Props {
+  title: string;
+  description: string;
+  theme_color?: string;
+  key_words?: string;
+}
+
+const { title, description, theme_color, key_words } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Antony chuquival huallanca" />
+    <meta name="description" content={description} />
+    {key_words ? <meta name="keywords" content={key_words} /> : null}
+    <title>{title}</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content={theme_color ? theme_color : "#1b1e23"} />
+    <!-- TODO: open Gradh -->
+
+    <!-- Import Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <NavBar />
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --white-color: #fefefe;
+    --bg-primary-color: #1b1e23;
+    --secundary-color: #2d3037;
+    --title-color: #0660ed;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    background: none;
+    border: none;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--secundary-color);
+  }
+</style>
