@@ -120,3 +120,23 @@ main .second-part {
   flex-direction: column;
   gap: 50px;
 }
+
+.link-redes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.link-redes > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-redes > ul > li > a > svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--neutral--100);
+}
