@@ -1,0 +1,237 @@
+main {
+  width: 100%;
+  padding: 0px 24px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 70px;
+  color: var(--neutral--100);
+}
+
+main .presentation {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+main .presentation .title-presentation {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+main .presentation .description-presentation {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--neutral);
+  text-align: start;
+}
+
+main .presentation::after {
+  position: absolute;
+  left: 0;
+  top: calc(0% - 20px);
+  content: "";
+  width: 90px;
+  height: 3px;
+  background: var(--neutral--100);
+}
+
+main .presentation .btn-about {
+  width: 55px;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: var(--accent--primary-1);
+  border-radius: 100%;
+}
+
+main .presentation .btn-about .arrow-down {
+  fill: var(--neutral--100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+}
+
+.card .title-card {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--neutral--100);
+}
+
+.card .description-card {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--neutral--400);
+}
+
+.card .button-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 9px;
+  border-bottom: solid var(--neutral--400) 0.3px;
+  transition: border-bottom .5s ease;
+}
+
+.card .button-card:hover {
+  border-bottom: solid var(--neutral--100) 1px;
+}
+
+.card .button-card:hover .rigth-arrow {
+  transform: translate(5px);
+}
+
+.card .button-card span {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--neutral--100);
+}
+
+.card .button-card .rigth-arrow {
+  width: 16px;
+  height: 16px;
+  fill: var(--neutral--100);
+  transition: transform .2s ease;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--neutral--700);
+}
+
+main .second-part {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+main .second-part .card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.link-redes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.link-redes > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-redes > ul > li > a > svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--neutral--100);
+}
+
+footer {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  padding-bottom: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--neutral--400);
+}
+
+@media (min-width: 458px) {
+  main .presentation .title-presentation {
+    font-size: 40px;
+  }
+
+  main .second-part .card-list {
+    flex-direction: row;
+  }
+
+  main .second-part .card-list .card {
+    width: 50%;
+  }
+
+  main .second-part .card-list .divider {
+    display: none;
+  }
+
+  main .presentation::after {
+    width: 148px;
+    height: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main .presentation {
+    width: 50%;
+  }
+
+  main .presentation .title-presentation {
+    margin-top: 40px;
+    font-size: 58px;
+  }
+
+  main .presentation .btn-about {
+    margin-top: 40px;
+  }
+
+  main .second-part {
+    width: 50%;
+  }
+
+  main .second-part .card-list {
+    flex-direction: column;
+  }
+  main .second-part .card-list .card {
+    width: auto;
+  }
+  main .second-part .card-list .divider {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    max-width: var(--max-size);
+  }
+
+  main .presentation {
+    max-width: 546px;
+  }
+
+  main .second-part {
+    max-width: 342px;
+  }
+}
