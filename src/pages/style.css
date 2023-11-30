@@ -1,6 +1,6 @@
 main {
   width: 100%;
-  padding: 0px 20px;
+  padding: 0px 24px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -121,6 +121,12 @@ main .second-part {
   gap: 50px;
 }
 
+main .second-part .card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .link-redes {
   width: 100%;
   display: flex;
@@ -156,4 +162,76 @@ footer > p {
   font-size: 14px;
   font-weight: 300;
   color: var(--neutral--400);
+}
+
+@media (min-width: 458px) {
+  main .presentation .title-presentation {
+    font-size: 40px;
+  }
+
+  main .second-part .card-list {
+    flex-direction: row;
+  }
+
+  main .second-part .card-list .card {
+    width: 50%;
+  }
+
+  main .second-part .card-list .divider {
+    display: none;
+  }
+
+  main .presentation::after {
+    width: 148px;
+    height: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main .presentation {
+    width: 50%;
+  }
+
+  main .presentation .title-presentation {
+    margin-top: 40px;
+    font-size: 58px;
+  }
+
+  main .presentation .btn-about {
+    margin-top: 40px;
+  }
+
+  main .second-part {
+    width: 50%;
+  }
+
+  main .second-part .card-list {
+    flex-direction: column;
+  }
+  main .second-part .card-list .card {
+    width: auto;
+  }
+  main .second-part .card-list .divider {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    max-width: var(--max-size);
+  }
+
+  main .presentation {
+    max-width: 546px;
+  }
+
+  main .second-part {
+    max-width: 342px;
+  }
 }
