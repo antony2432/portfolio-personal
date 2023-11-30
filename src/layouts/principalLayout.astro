@@ -1,0 +1,103 @@
+---
+import NavBar from "../components/Nabar/Navbar.astro";
+interface Props {
+  title: string;
+  description: string;
+  theme_color?: string;
+  key_words?: string;
+}
+
+const { title, description, theme_color, key_words } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Antony chuquival huallanca" />
+    <meta name="description" content={description} />
+    {key_words ? <meta name="keywords" content={key_words} /> : null}
+    <title>{title}</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content={theme_color ? theme_color : "#1b1e23"} />
+    <!-- TODO: open Gradh -->
+
+    <!-- Import Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <NavBar />
+    <slot />
+  </body>
+</html>
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+  :root {
+    --neutral--100: white;
+    --neutral--300: #e4e7ec;
+    --neutral--400: #c3cad5;
+    --neutral--500: #8895aa;
+    --neutral--600: #5d6c83;
+    --neutral--700: #2d343f;
+    --neutral--800: #1b1f24;
+    --general--shadow-01: rgba(20, 20, 43, 0.06);
+    --accent--primary-1: #075fe4;
+    --secondary--color-1: #2e81ff;
+    --neutral--200: #f0f2f4;
+    --system--green-400: #11845b;
+    --system--blue-400: #086cd9;
+    --system--blue-300: #1d88fe;
+    --system--blue-200: #8fc3ff;
+    --system--blue-100: #eaf4ff;
+    --system--green-300: #05c168;
+    --system--green-200: #7fdca4;
+    --system--green-100: #def2e6;
+    --system--red-400: #dc2b2b;
+    --system--300: #ff5a65;
+    --system--red-200: #ffbec2;
+    --system--red-100: #ffeff0;
+    --system--orange-400: #d5691b;
+    --system--orange-300: #ff9e2c;
+    --system--orange-200: #ffd19b;
+    --system--orange-100: #fff3e4;
+    --general--shadow-02: rgba(20, 20, 43, 0.08);
+    --general--shadow-03: rgba(20, 20, 43, 0.1);
+    --general--shadow-04: rgba(20, 20, 43, 0.14);
+    --general--shadow-05: rgba(20, 20, 43, 0.16);
+    --general--shadow-06: rgba(20, 20, 43, 0.24);
+    --button-shadow--color-01: rgba(74, 58, 255, 0.06);
+    --button-shadow--color-2: rgba(58, 143, 255, 0.08);
+    --button-shadow--color-03: rgba(58, 143, 255, 0.08);
+    --button-shadow--white-01: rgba(20, 20, 43, 0.04);
+    --button-shadow--white-02: rgba(20, 20, 43, 0.06);
+    --button-shadow--white-03: rgba(20, 20, 43, 0.1);
+
+    --max-size: 1300px;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    background: none;
+    border: none;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--neutral--800);
+  }
+</style>
