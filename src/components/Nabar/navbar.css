@@ -1,6 +1,6 @@
 header {
   min-height: 78px;
-  background: var(--bg-primary-color);
+  background: var(--neutral--800);
 }
 
 .header {
@@ -9,7 +9,7 @@ header {
   padding-bottom: 15px;
   padding-right: 20px;
   padding-left: 20px;
-  color: var(--white-color);
+  color: var(--neutral--100);
   display: flex;
   flex-flow: wrap;
   overflow: hidden;
@@ -27,7 +27,7 @@ header {
 .header .logo-section .logo-section-svg {
   width: 30px;
   height: 30px;
-  fill: var(--title-color);
+  fill: var(--accent--primary-1);
   transition: all .2s ease;
 }
 
@@ -43,7 +43,7 @@ header {
 }
 
 .header .header-button .header-button-svg {
-  fill: var(--white-color);
+  fill: var(--neutral--100);
   width: 38px;
   height: 38px;
 }
@@ -71,8 +71,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--white-color);
-  fill: var(--white-color);
+  color: var(--neutral--100);
+  fill: var(--neutral--100);
   border-radius: 5px;
   transition: all .5s;
 }
@@ -87,7 +87,7 @@ header {
   width: 100%;
   height: 1px;
   margin-top: 1rem;
-  color: var(--white-color);
+  color: var(--neutral--100);
 }
 
 .header .navigation .navigation-list .list-item.children .child-button {
@@ -139,7 +139,7 @@ header {
 }
 
 .header .navigation .navigation-list .list-item.children .navigation-children .navigation-list-children .list-item-children .ancor {
-  color: var(--white-color);
+  color: var(--neutral--100);
   font-size: 16px;
 }
 
@@ -170,7 +170,7 @@ header {
   .header .logo-section:hover .logo-section-svg {
     width: 40px;
     height: 40px;
-    fill: var(--title-color);
+    fill: var(--accent--primary-1);
   }
 
   .header .logo-section:hover .header-title {
@@ -192,9 +192,9 @@ header {
   }
 
   .header .navigation .navigation-list .list-item:hover {
-    background: var(--white-color);
-    color: var(--bg-primary-color);
-    fill: var(--bg-primary-color);
+    background: var(--neutral--100);
+    color: var(--neutral--800);
+    fill: var(--neutral--800);
   }
 
   .header .navigation .navigation-list .list-item hr {
@@ -218,7 +218,7 @@ header {
     top: 100%;
     padding: 10px 0px;
     border-radius: 5px;
-    background: var(--bg-primary-color);
+    background: var(--neutral--800);
     transition: all .3s ease;
   }
 
@@ -243,7 +243,7 @@ header {
     content: "";
     width: 100%;
     height: 4px;
-    background: var(--title-color);
+    background: var(--accent--primary-1);
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
