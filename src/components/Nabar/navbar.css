@@ -14,7 +14,6 @@ header {
 }
 
 .header .logo-section {
-  min-width: 263px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -52,7 +51,7 @@ header {
 }
 
 .header .navigation .navigation-list {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -176,6 +175,7 @@ header {
 
   .header .navigation .navigation-list {
     width: 100%;
+    margin-top: 1rem;
     flex-flow: row nowrap;
     gap: 0px;
   }
