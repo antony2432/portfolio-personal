@@ -1,12 +1,28 @@
 ---
 import PrincipalLayout from "../../layouts/principalLayout.astro";
 import Footer from "../../components/Footer/footer.astro";
+import "./style.css";
 ---
 
 <PrincipalLayout
   title="Sobre Antony"
   description="La vida profesional de Antony chuquival Huallanca"
 >
-  <main></main>
+  <main class="about-main">
+    <section class="about-presentation">
+      <h1 class="title-about-presentation">
+        Un gusto en conocerte, Soy<br />
+         Antony chuquival
+      </h1>
+      <p class="description-about-presentation">
+        Soy un apasionado desarrollador de software y Full Stack Developer en
+        constante crecimiento. Especializado en React, Next.js y Nest.js,
+        persigo la mejora continua y la innovación. Ansío contribuir y prosperar
+        en entornos desafiantes, impulsado por el aprendizaje constante y el
+        trabajo colaborativo.
+      </p>
+    </section>
+    <hr class="divider">
+  </main>
   <Footer />
 </PrincipalLayout>

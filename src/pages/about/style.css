@@ -1,0 +1,41 @@
+.about-main {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-main .about-presentation {
+  width: 100%;
+  padding-top: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.about-main .about-presentation .title-about-presentation {
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--neutral--100);
+}
+
+.about-main .about-presentation .description-about-presentation {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--neutral--400);
+  text-align: start;
+}
+
+.about-main .about-presentation::after {
+  position: absolute;
+  left: 0;
+  top: calc(0% - 20px);
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: var(--neutral--100);
+}
