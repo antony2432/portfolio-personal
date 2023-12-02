@@ -14,9 +14,3 @@ footer > p {
   font-weight: 300;
   color: var(--neutral--400);
 }
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background: var(--neutral--700);
-}

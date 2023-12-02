@@ -26,7 +26,7 @@ main .presentation .description-presentation {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.7;
-  color: var(--neutral);
+  color: var(--neutral--100);
   text-align: start;
 }
 
@@ -109,12 +109,6 @@ main .presentation .btn-about .arrow-down {
   transition: transform .2s ease;
 }
 
-.divider {
-  width: 100%;
-  height: 1px;
-  background: var(--neutral--700);
-}
-
 main .second-part {
   display: flex;
   flex-direction: column;
@@ -134,14 +128,14 @@ main .second-part .card-list {
   gap: 30px;
 }
 
-.link-redes > ul {
+.link-redes>ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
 }
 
-.link-redes > ul > li > a > svg {
+.link-redes>ul>li>a>svg {
   width: 22px;
   height: 22px;
   fill: var(--neutral--100);
@@ -197,9 +191,11 @@ main .second-part .card-list {
   main .second-part .card-list {
     flex-direction: column;
   }
+
   main .second-part .card-list .card {
     width: auto;
   }
+
   main .second-part .card-list .divider {
     display: block;
   }
